@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const EMPLOYEE_API_BASE_URL =
-  "https://employee-system-api-production.up.railway.app/api/v1/employees";
+const EMPLOYEE_API_BASE_URL = process.env.REACT_APP_NOT_SECRET_CODE;
 
 function saveEmployee(employee) {
   return axios.post(EMPLOYEE_API_BASE_URL, employee);
